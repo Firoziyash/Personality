@@ -74,7 +74,7 @@ document.getElementById('personality-form').addEventListener('submit', function(
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            access_key: 'YOUR_ACCESS_KEY_HERE',
+            access_key: '15e42be6-a1ae-4a52-a0de-9d0d5e885959',
             name: name,
             day: day,
             month: month,
