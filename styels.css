@@ -5,11 +5,10 @@ body, h1, label, input, button, div {
     box-sizing: border-box;
 }
 
-/* Apply a background image to the body */
+/* Apply a background color to the body */
 body {
-    font-family: Arial, sans-serif;
-    background: url('assets/background.jpg') no-repeat center center fixed;
-    background-size: cover;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,12 +17,12 @@ body {
 
 /* Style the container */
 .container {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     padding: 30px;
     border-radius: 15px;
     text-align: center;
     width: 350px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     animation: fadeIn 1s ease-in-out;
 }
 
@@ -55,6 +54,7 @@ label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    color: #555;
 }
 
 input[type="text"], input[type="number"] {
@@ -64,6 +64,11 @@ input[type="text"], input[type="number"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #007BFF;
 }
 
 /* Style the submit button */
@@ -75,11 +80,12 @@ button {
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
     background: #0056b3;
+    transform: scale(1.05);
 }
 
 /* Style the result section */
