@@ -18,12 +18,32 @@ body {
 
 /* Style the container */
 .container {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
     text-align: center;
-    width: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 350px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Style the heading */
+h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'Arial Black', sans-serif;
 }
 
 /* Style the form elements */
@@ -39,26 +59,27 @@ label {
 
 input[type="text"], input[type="number"] {
     width: calc(100% - 20px);
-    padding: 8px;
+    padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 14px;
 }
 
 /* Style the submit button */
 button {
-    background: url('assets/button.png') no-repeat center center;
-    background-size: cover;
+    background: #007BFF;
     border: none;
     padding: 10px 20px;
     color: white;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
+    transition: background 0.3s ease;
 }
 
 button:hover {
-    opacity: 0.8;
+    background: #0056b3;
 }
 
 /* Style the result section */
@@ -66,4 +87,5 @@ button:hover {
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
+    color: #333;
 }
