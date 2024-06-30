@@ -13,11 +13,11 @@
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br><br>
             <label for="day">Day (DD):</label>
-            <input type="text" id="day" name="day" required><br><br>
+            <input type="number" id="day" name="day" min="1" max="31" required><br><br>
             <label for="month">Month (MM):</label>
-            <input type="text" id="month" name="month" required><br><br>
+            <input type="number" id="month" name="month" min="1" max="12" required><br><br>
             <label for="year">Year (YYYY):</label>
-            <input type="text" id="year" name="year" required><br><br>
+            <input type="number" id="year" name="year" min="1900" max="2100" required><br><br>
             <button type="submit">Submit</button>
         </form>
         <div id="result"></div>
