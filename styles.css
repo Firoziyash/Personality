@@ -7,8 +7,9 @@ body, h1, h4, label, input, button, div {
 
 /* Apply a background color to the body */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
+    font-family: Arial, sans-serif;
+    background: url('assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +47,7 @@ h1 {
 }
 
 h4 {
-    color: #6363e8;
+    color: #909090;
     font-size: 15px;
     margin-bottom: 15px;
     font-family: 'SKYLER';
