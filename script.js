@@ -1,3 +1,22 @@
+<form id="personality-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="day">Day:</label>
+    <input type="number" id="day" min="1" max="31" required>
+
+    <label for="month">Month:</label>
+    <input type="number" id="month" min="1" max="12" required>
+
+    <label for="year">Year:</label>
+    <input type="number" id="year" min="1900" max="2100" required>
+
+    <button type="submit">Submit</button>
+</form>
+
+<div id="result"></div>
+
+<script>
 document.getElementById('personality-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -43,7 +62,7 @@ document.getElementById('personality-form').addEventListener('submit', function(
     const silver = [2, 5, 8];
     const golden = [4, 5, 6];
 
-    let traits = "Nice";
+    let traits = "Ordinary";
     if (golden.every(v => dob.includes(v))) {
         traits = "Most Unique";
     } else if (silver.every(v => dob.includes(v))) {
@@ -74,7 +93,7 @@ document.getElementById('personality-form').addEventListener('submit', function(
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            access_key: '15e42be6-a1ae-4a52-a0de-9d0d5e885959',
+            access_key: 'YOUR_ACCESS_KEY_HERE',
             name: name,
             day: day,
             month: month,
@@ -90,3 +109,4 @@ document.getElementById('personality-form').addEventListener('submit', function(
         console.error('Error:', error);
     });
 });
+</script>
