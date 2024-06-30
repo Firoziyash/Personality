@@ -43,7 +43,7 @@ document.getElementById('personality-form').addEventListener('submit', function(
     const silver = [2, 5, 8];
     const golden = [4, 5, 6];
 
-    let traits = "Ordinary";
+    let traits = "Nice";
     if (golden.every(v => dob.includes(v))) {
         traits = "Most Unique";
     } else if (silver.every(v => dob.includes(v))) {
