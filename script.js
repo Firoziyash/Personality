@@ -47,7 +47,7 @@ document.getElementById('personality-form').addEventListener('submit', function(
     if (golden.every(v => dob.includes(v))) {
         traits = "Most Unique";
     } else if (silver.every(v => dob.includes(v))) {
-        traits = "Rich or Famous";
+        traits = "Rich Minded";
     } else if (mental.every(v => dob.includes(v))) {
         traits = "Intelligent";
     } else if (emotional.every(v => dob.includes(v))) {
