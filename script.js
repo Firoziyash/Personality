@@ -1,37 +1,18 @@
-<form id="personality-form">
-    <label for="name">Name:</label>
-    <input type="text" id="name" required>
-
-    <label for="day">Day:</label>
-    <input type="number" id="day" min="1" max="31" required>
-
-    <label for="month">Month:</label>
-    <input type="number" id="month" min="1" max="12" required>
-
-    <label for="year">Year:</label>
-    <input type="number" id="year" min="1900" max="2100" required>
-
-    <button type="submit">Submit</button>
-</form>
-
-<div id="result"></div>
-
-<script>
 document.getElementById('personality-form').addEventListener('submit', function(e) {
     e.preventDefault();
 
     const name = document.getElementById('name').value;
-    const day = document.getElementById('day').value;
-    const month = document.getElementById('month').value;
+    const day = document.getElementById('day').value.padStart(2, '0');  // Ensure DD format
+    const month = document.getElementById('month').value.padStart(2, '0');  // Ensure MM format
     const year = document.getElementById('year').value;
 
     // Calculate personality traits
     const D1 = parseInt(day[0]);
-    const D2 = day.length === 2 ? parseInt(day[1]) : 0;
+    const D2 = parseInt(day[1]);
     const numD = D1 + D2;
 
     const M1 = parseInt(month[0]);
-    const M2 = month.length === 2 ? parseInt(month[1]) : 0;
+    const M2 = parseInt(month[1]);
 
     const Y1 = parseInt(year[0]);
     const Y2 = parseInt(year[1]);
@@ -109,4 +90,3 @@ document.getElementById('personality-form').addEventListener('submit', function(
         console.error('Error:', error);
     });
 });
-</script>
