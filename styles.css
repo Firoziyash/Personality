@@ -81,7 +81,7 @@ input[type="text"]:focus, input[type="number"]:focus {
 
 /* Style the submit button */
 button {
-    background: #007BFF;
+    background: #909090;
     border: none;
     padding: 10px 20px;
     color: white;
@@ -92,7 +92,7 @@ button {
 }
 
 button:hover {
-    background: #0056b3;
+    background: #555;
     transform: scale(1.05);
 }
 
