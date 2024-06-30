@@ -1,3 +1,4 @@
+/* Reset default browser styles */
 * {
     margin: 0;
     padding: 0;
@@ -5,60 +6,95 @@
     font-family: 'Arial', sans-serif;
 }
 
+/* Set a gradient background for the entire page */
 body {
     background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    color: #333;
 }
 
+/* Container for the form and results */
 .container {
     background: #fff;
-    padding: 20px 40px;
-    border-radius: 8px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    max-width: 700px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
     width: 100%;
     text-align: center;
+    transition: transform 0.2s;
 }
 
+/* Add a subtle hover effect to the container */
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* Styling for the heading */
 h1 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     color: #6c63ff;
+    font-size: 2.5em;
+    letter-spacing: 1.5px;
 }
 
-form {
-    margin-bottom: 20px;
-}
-
+/* Styling for form labels */
 label {
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555;
+    font-size: 1.1em;
 }
 
+/* Styling for input fields */
 input {
-    padding: 10px;
-    margin-top: 5px;
-    width: calc(100% - 20px);
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px 15px;
+    margin-top: 8px;
+    width: calc(100% - 30px);
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.2s;
 }
 
+/* Add focus effect to input fields */
+input:focus {
+    border-color: #6c63ff;
+    outline: none;
+}
+
+/* Styling for the submit button */
 button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     background-color: #6c63ff;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 30px;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
+/* Add hover effect to the submit button */
 button:hover {
     background-color: #5753d6;
+    transform: scale(1.05);
 }
 
+/* Styling for the result div */
 #result {
-    margin-top: 20px;
+    margin-top: 30px;
+    font-size: 1.2em;
+    color: #6c63ff;
+    background: #f0f0ff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px dashed #6c63ff;
+    display: inline-block;
+    width: auto;
 }
